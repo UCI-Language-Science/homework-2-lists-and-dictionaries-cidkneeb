@@ -23,7 +23,20 @@
 def temperature_calculator():
     # YOUR CODE GOES HERE
     # You can delete the line below when you start adding code
-    pass
+    has_input = True
+    temp_list = []
+    temp = input("Input a temperature\n")
+    while has_input:
+        if temp == 'quit' or temp == 'Quit':
+            print("Goodbye")
+            has_input = False
+        else:
+            temp_list.append(int(temp))
+            if len(temp_list) == 1:
+                print(f'The average temperature so far is {temp}')
+            else:
+                print(f'The average temperature so far is {sum(temp_list)/len(temp_list)}')
+            temp = input("Input a temperature\n")
 
 if __name__ == "__main__":
     temperature_calculator()

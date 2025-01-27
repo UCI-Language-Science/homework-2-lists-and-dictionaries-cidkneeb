@@ -30,7 +30,29 @@
 def grocery_calculator():
     # YOUR CODE GOES HERE
     # You can delete the line below when you start adding code
-    pass
+    groceries = {'bread': 3,
+                 'eggs': 6,
+                 'milk': 4,
+                 'butter': 2}
+    prices = []
+    has_input = True
+    item = input("Input grocery item: \n")
+    while has_input:
+        if item == '':
+            has_input = False
+        else:
+            if item not in groceries.keys():
+                print("The store doesn't have that\n")
+                item = input("Input next grocery item: \n")
+            else:
+                # print(item)
+                prices.append(groceries[item])
+                item = input("Input next grocery item: \n")
+                continue
+    print(f'Your total grocery bill is ${sum(prices)}')
+            
+
+
 
 if __name__ == "__main__":
     grocery_calculator()
