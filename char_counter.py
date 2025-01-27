@@ -33,7 +33,7 @@ def char_counter():
     for letter in lst:
         d[letter] = d.get(letter, 0) + 1
     for letter, count in d.items():
-        print(f'{letter}: {count}')
+        print(f"'{letter}'': {count}")
         
 if __name__ == "__main__":
     char_counter()
